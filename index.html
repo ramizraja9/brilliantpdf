@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Master</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-12 flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold text-red-600">PDF Master</a>
+            <nav class="hidden md:flex ml-10 space-x-6">
+                <a href="#" class="text-gray-600 hover:text-red-600 font-medium">HOME</a>
+                <a href="#" class="text-gray-600 hover:text-red-600 font-medium">TOOLS</a>
+                <a href="#" class="text-gray-600 hover:text-red-600 font-medium">FEATURES</a>
+                <a href="#" class="text-gray-600 hover:text-red-600 font-medium">PRICING</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="text-gray-600 hover:text-red-600 font-medium hidden sm:block">Login</a>
+            <a href="#" class="btn-primary hidden sm:block">Sign up</a>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main-content" class="flex-grow container mx-auto px-4 py-12 md:py-20 relative">
+        <section id="hero-section" class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-4">
+                Every tool you need to work with PDFs in one place
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Merge, split, compress, convert, edit, and sign your PDFs with ease.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="btn-primary text-lg">Get Started</button>
+                <button class="bg-white text-red-600 border border-red-600 px-6 py-3 rounded-lg font-semibold text-lg hover:bg-red-50 hover:border-red-700 transition-colors">
+                    Learn More
+                </button>
+            </div>
+        </section>
+
+        <!-- Tools Grid -->
+        <section id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Merge PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Merge PDF" data-accept-types=".pdf" data-multiple="true">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Merge PDF</h3>
+                <p class="text-gray-500 text-sm">Combine multiple PDFs into one.</p>
+            </div>
+
+            <!-- Split PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Split PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v4a1 1 0 001 1h6a1 1 0 001-1V7m0 10v-4a1 1 0 00-1-1H9a1 1 0 00-1 1v4m0 0H6m10 0h2"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Split PDF</h3>
+                <p class="text-gray-500 text-sm">Divide a PDF into separate files.</p>
+            </div>
+
+            <!-- Compress PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Compress PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Compress PDF</h3>
+                <p class="text-gray-500 text-sm">Reduce PDF file size.</p>
+            </div>
+
+            <!-- PDF to Word -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="PDF to Word" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">PDF to Word</h3>
+                <p class="text-gray-500 text-sm">Convert PDF to editable Word document.</p>
+            </div>
+
+            <!-- PDF to PowerPoint -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="PDF to PowerPoint" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h4c0 1.105.895 2 2 2h4l-1-1-1-1h-4a2 2 0 01-2-2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">PDF to PowerPoint</h3>
+                <p class="text-gray-500 text-sm">Convert PDF to editable PowerPoint presentation.</p>
+            </div>
+
+            <!-- PDF to Excel -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="PDF to Excel" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-5m3 5v-5m3 5v-5M9 7h.01M12 7h.01M15 7h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">PDF to Excel</h3>
+                <p class="text-gray-500 text-sm">Convert PDF to editable Excel spreadsheet.</p>
+            </div>
+
+            <!-- Word to PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Word to PDF" data-accept-types=".doc,.docx">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Word to PDF</h3>
+                <p class="text-gray-500 text-sm">Convert Word document to PDF.</p>
+            </div>
+
+            <!-- PowerPoint to PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="PowerPoint to PDF" data-accept-types=".ppt,.pptx">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17L9 20l-1 1h4c0 1.105.895 2 2 2h4l-1-1-1-1h-4a2 2 0 01-2-2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">PowerPoint to PDF</h3>
+                <p class="text-gray-500 text-sm">Convert PowerPoint presentation to PDF.</p>
+            </div>
+
+            <!-- Excel to PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Excel to PDF" data-accept-types=".xls,.xlsx">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-5m3 5v-5m3 5v-5M9 7h.01M12 7h.01M15 7h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Excel to PDF</h3>
+                <p class="text-gray-500 text-sm">Convert Excel spreadsheet to PDF.</p>
+            </div>
+
+            <!-- Edit PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Edit PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Edit PDF</h3>
+                <p class="text-gray-500 text-sm">Annotate, add text/images/shapes.</p>
+            </div>
+
+            <!-- PDF to JPG -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="PDF to JPG" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">PDF to JPG</h3>
+                <p class="text-gray-500 text-sm">Convert PDF pages to JPG images.</p>
+            </div>
+
+            <!-- JPG to PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="JPG to PDF" data-accept-types=".jpg,.jpeg,.png" data-multiple="true">
+                <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">JPG to PDF</h3>
+                <p class="text-gray-500 text-sm">Convert JPG images to PDF.</p>
+            </div>
+
+            <!-- Sign PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Sign PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign PDF</h3>
+                <p class="text-gray-500 text-sm">Add digital signatures to your PDF.</p>
+            </div>
+
+            <!-- Watermark -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Watermark" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-lime-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-lime-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Watermark</h3>
+                <p class="text-gray-500 text-sm">Add image or text watermark.</p>
+            </div>
+
+            <!-- Rotate PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Rotate PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356-2A8.001 8.001 0 004 12c0 2.127.67 4.103 1.859 5.753m-1.859-5.753V9m0 0h5m-9.859 1.753A8.001 8.001 0 0120 12c0 2.127-.67 4.103-1.859 5.753m1.859-5.753V15m0 0h-5"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Rotate PDF</h3>
+                <p class="text-gray-500 text-sm">Rotate PDF pages permanently.</p>
+            </div>
+
+            <!-- HTML to PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="HTML to PDF" data-accept-types=".html,.htm">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">HTML to PDF</h3>
+                <p class="text-gray-500 text-sm">Convert web pages to PDF.</p>
+            </div>
+
+            <!-- Unlock PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Unlock PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0v4m-4 2v5m-4-5h8"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Unlock PDF</h3>
+                <p class="text-gray-500 text-sm">Remove password protection.</p>
+            </div>
+
+            <!-- Protect PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Protect PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Protect PDF</h3>
+                <p class="text-gray-500 text-sm">Add password protection.</p>
+            </div>
+
+            <!-- Organize PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Organize PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v4a1 1 0 001 1h6a1 1 0 001-1V7m0 10v-4a1 1 0 00-1-1H9a1 1 0 00-1 1v4m0 0H6m10 0h2"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Organize PDF</h3>
+                <p class="text-gray-500 text-sm">Reorder, delete, add pages.</p>
+            </div>
+
+            <!-- Repair PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Repair PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Repair PDF</h3>
+                <p class="text-gray-500 text-sm">Fix corrupted PDF files.</p>
+            </div>
+
+            <!-- Page Numbering on PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Page Numbering on PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Page Numbering</h3>
+                <p class="text-gray-500 text-sm">Add page numbers to your PDF.</p>
+            </div>
+
+            <!-- ODC to PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="ODC to PDF" data-accept-types=".odc">
+                <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-5m3 5v-5m3 5v-5M9 7h.01M12 7h.01M15 7h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">ODC to PDF</h3>
+                <p class="text-gray-500 text-sm">Convert ODC files to PDF.</p>
+            </div>
+
+            <!-- Crop PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Crop PDF" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.102 1.101m-4.899.758l-.101.101M12 12l.101-.101"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Crop PDF</h3>
+                <p class="text-gray-500 text-sm">Crop PDF pages to desired area.</p>
+            </div>
+
+            <!-- Compare PDF -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="Compare PDF" data-accept-types=".pdf" data-multiple="true">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Compare PDF</h3>
+                <p class="text-gray-500 text-sm">Show differences between PDFs.</p>
+            </div>
+
+            <!-- PDF to PDF/A -->
+            <div class="tool-card bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center" data-tool-name="PDF to PDF/A" data-accept-types=".pdf">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">PDF to PDF/A</h3>
+                <p class="text-gray-500 text-sm">Convert PDF to archive format.</p>
+            </div>
+        </section>
+
+        <!-- File Upload Section (Initially Hidden) -->
+        <section id="upload-section" class="hidden text-center py-16">
+            <button id="back-to-tools" class="absolute top-8 left-8 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Tools
+            </button>
+            <h2 id="upload-title" class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Upload Your File(s) for [Tool Name]</h2>
+            <p class="text-lg text-gray-600 mb-8">Drag and drop your file(s) here, or click to browse.</p>
+
+            <div id="drop-area" class="border-2 border-dashed border-red-400 rounded-xl p-12 mb-8 cursor-pointer hover:border-red-600 hover:bg-red-50 transition-colors mx-auto max-w-2xl">
+                <input type="file" id="file-input" class="hidden" />
+                <label for="file-input" class="block text-red-600 font-semibold text-xl cursor-pointer">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 0115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    Drag & Drop or <span class="underline">Choose File(s)</span>
+                </label>
+                <p id="file-requirements" class="text-gray-500 text-sm mt-2">Accepted file types: .pdf</p>
+                <p id="selected-files-info" class="text-gray-700 mt-4 font-medium"></p>
+            </div>
+
+            <button class="btn-primary text-lg px-8 py-4">Process File(s)</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6 md:px-12 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2025 PDF Master. All rights reserved.</p>
+            <div class="flex flex-wrap justify-center space-x-6 text-sm">
+                <a href="#" class="hover:text-red-400">Privacy Policy</a>
+                <a href="#" class="hover:text-red-400">Terms of Service</a>
+                <a href="#" class="hover:text-red-400">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
